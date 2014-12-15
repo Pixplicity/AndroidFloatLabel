@@ -124,44 +124,25 @@ public class FloatLabelEditText
         for (int i = 0; i < n; i++) {
             int attr = a.getIndex(i);
 
-            switch (attr) {
-                case R.styleable.FloatLabelEditText_android_hint:
-                    mHintText = a.getText(attr);
-                    break;
-
-                case R.styleable.FloatLabelEditText_android_text:
-                    mEditText = a.getText(attr);
-                    break;
-
-                case R.styleable.FloatLabelEditText_android_inputType:
-                    mEditTextView.setInputType(a.getInt(attr, mEditTextView.getInputType()));
-                    break;
-
-                case R.styleable.FloatLabelEditText_android_imeOptions:
-                    mEditTextView.setImeOptions(a.getInt(attr, mEditTextView.getImeOptions()));
-                    break;
-
-                case R.styleable.FloatLabelEditText_android_gravity:
-                    mGravity = a.getInt(attr, mGravity);
-                    break;
-
-                case R.styleable.FloatLabelEditText_android_textSize:
-                    mTextSizeInSp = getScaledFontSize(a.getDimensionPixelSize(attr,
-                            (int) mEditTextView.getTextSize()));
-                    break;
-
-                case R.styleable.FloatLabelEditText_textColorHintFocused:
-                    mFocusedColor = a.getColor(attr, mFocusedColor);
-                    break;
-
-                case R.styleable.FloatLabelEditText_textColorHintUnFocused:
-                    mUnFocusedColor = a.getColor(attr, mUnFocusedColor);
-                    break;
-
-                case R.styleable.FloatLabelEditText_fitScreenWidth:
-                    mFitScreenWidth = a.getInt(attr, 0);
-                    break;
-
+            if (attr == R.styleable.FloatLabelEditText_android_hint) {
+                mHintText = a.getText(attr);
+            } else if (attr == R.styleable.FloatLabelEditText_android_text) {
+                mEditText = a.getText(attr);
+            } else if (attr == R.styleable.FloatLabelEditText_android_inputType) {
+                mEditTextView.setInputType(a.getInt(attr, mEditTextView.getInputType()));
+            } else if (attr == R.styleable.FloatLabelEditText_android_imeOptions) {
+                mEditTextView.setImeOptions(a.getInt(attr, mEditTextView.getImeOptions()));
+            } else if (attr == R.styleable.FloatLabelEditText_android_gravity) {
+                mGravity = a.getInt(attr, mGravity);
+            } else if (attr == R.styleable.FloatLabelEditText_android_textSize) {
+                mTextSizeInSp = getScaledFontSize(a.getDimensionPixelSize(attr,
+                        (int) mEditTextView.getTextSize()));
+            } else if (attr == R.styleable.FloatLabelEditText_textColorHintFocused) {
+                mFocusedColor = a.getColor(attr, mFocusedColor);
+            } else if (attr == R.styleable.FloatLabelEditText_textColorHintUnFocused) {
+                mUnFocusedColor = a.getColor(attr, mUnFocusedColor);
+            } else if (attr == R.styleable.FloatLabelEditText_fitScreenWidth) {
+                mFitScreenWidth = a.getInt(attr, 0);
             }
         }
         a.recycle();
