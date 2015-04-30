@@ -3,16 +3,16 @@ def versionMinor = 2
 def versionPatch = 1
 def versionBuild = 0
 
-apply plugin: 'android-library'
+apply plugin: 'com.android.library'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:20.0.0'
+    compile 'com.android.support:appcompat-v7:22.0.0'
 
-    provided 'com.jakewharton.espresso:espresso:1.1-r3'
+    compile 'com.jakewharton.espresso:espresso:1.1-r3'
     androidTestCompile 'com.jakewharton.espresso:espresso:1.1-r3'
 }
 
