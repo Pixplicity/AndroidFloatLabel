@@ -1,7 +1,5 @@
 package com.micromobs.android.floatlabel;
 
-//import org.hamcrest.Matcher;
-
 import android.view.View;
 import android.widget.EditText;
 
