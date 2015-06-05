@@ -11,7 +11,7 @@ repositories {
 
 dependencies {
 //    compile 'com.android.support:appcompat-v7:22.1.1'
-    compile 'com.jakewharton.espresso:espresso:1.1-r3'
+    testCompile 'com.jakewharton.espresso:espresso:1.1-r3'
     androidTestCompile 'com.jakewharton.espresso:espresso:1.1-r3'
 }
 
